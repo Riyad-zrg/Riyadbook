@@ -3,8 +3,8 @@ import Button from "@mui/material/Button";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import { styled, Typography } from "@mui/material";
 
-const BlueButton = styled(Button)({
-  backgroundColor: "skyblue",
+const BlueButton = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
   color: "#888",
   margin: "5px",
   "&:hover": {
@@ -14,7 +14,7 @@ const BlueButton = styled(Button)({
     backgroundColor: "gray",
     color: "white",
   },
-});
+}));
 function App() {
   return (
     <>
