@@ -9,11 +9,13 @@ import {
   Typography,
   Badge,
   Avatar,
+  MenuItem,
 } from "@mui/material";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import SearchIcon from "@mui/icons-material/Search";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import Menu from "@mui/material/Menu";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -49,6 +51,7 @@ const UserBox = styled(Box)(({ theme }) => ({
   },
 }));
 function Navbar() {
+  const [open, setOpen] = React.useState(false);
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -76,9 +79,10 @@ function Navbar() {
             sx={{ width: "30px", height: "30px" }}
             alt="Avatar"
             src="https://media.licdn.com/dms/image/v2/D4E03AQHyxEVxYejbsw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725607631430?e=2147483647&v=beta&t=z7BJKnTdQmBANNl3lik6dqXQXSg7JHIRfvWe4zSzeR8"
+            onClick={() => setOpen(true)}
           />
         </Icons>
-        <UserBox>
+        <UserBox onClick={() => setOpen(true)}>
           <Avatar
             sx={{ width: "30px", height: "30px" }}
             alt="Avatar"
@@ -87,6 +91,24 @@ function Navbar() {
           <Typography variant={"span"}>Riyad</Typography>
         </UserBox>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={open}
+        onClose={() => setOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 }
