@@ -15,6 +15,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import PeopleIcon from "@mui/icons-material/People";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import DarkModeSwitch from "./DarkModeSwitch.jsx";
 
 function Sidebar() {
   return (
@@ -88,6 +89,10 @@ function Sidebar() {
             </ListItemIcon>
             <ListItemText primary="Profil" />
           </ListItemButton>
+        </ListItem>
+
+        <ListItem disablePadding>
+          <DarkModeSwitch />
         </ListItem>
       </List>
     </Box>
