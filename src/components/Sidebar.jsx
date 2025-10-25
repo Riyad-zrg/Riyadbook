@@ -92,7 +92,7 @@ function Sidebar() {
         </ListItem>
 
         <ListItem disablePadding>
-          <DarkModeSwitch />
+          <DarkModeSwitch component="div" />
         </ListItem>
       </List>
     </Box>
