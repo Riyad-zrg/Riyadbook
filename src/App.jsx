@@ -1,4 +1,6 @@
-import {Sidebar, Feed, Rightbar} from "./components"
+import Sidebar from "./components/Sidebar.jsx";
+import Feed from "./components/Feed.jsx";
+import Rightbar from "./components/Rightbar.jsx";
 
 function App() {
   return (<>
