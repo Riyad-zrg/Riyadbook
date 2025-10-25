@@ -7,9 +7,13 @@ import {
   styled,
   Toolbar,
   Typography,
+  Badge,
+  Avatar,
 } from "@mui/material";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import SearchIcon from "@mui/icons-material/Search";
+import MailIcon from "@mui/icons-material/Mail";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -27,7 +31,9 @@ const SearchBar = styled("div")(({ theme }) => ({
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
-  backgroundColor: "white",
+  display: "flex",
+  gap: "20px",
+  alignItems: "center",
 }));
 function Navbar() {
   return (
@@ -46,7 +52,19 @@ function Navbar() {
           <SearchIcon color="primary" />
           <InputBase placeholder="Recherche..." />
         </SearchBar>
-        <Icons>icons</Icons>
+        <Icons>
+          <Badge badgeContent={4} color="error">
+            <MailIcon />
+          </Badge>
+          <Badge badgeContent={4} color="error">
+            <NotificationsIcon />
+          </Badge>
+          <Avatar
+            sx={{ width: "30px", height: "30px" }}
+            alt="Avatar"
+            src="https://media.licdn.com/dms/image/v2/D4E03AQHyxEVxYejbsw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725607631430?e=2147483647&v=beta&t=z7BJKnTdQmBANNl3lik6dqXQXSg7JHIRfvWe4zSzeR8"
+          />
+        </Icons>
       </StyledToolbar>
     </AppBar>
   );
