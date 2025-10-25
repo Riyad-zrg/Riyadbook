@@ -17,6 +17,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
+  flexDirection: "row",
   justifyContent: "space-between",
 });
 
@@ -31,9 +32,21 @@ const SearchBar = styled("div")(({ theme }) => ({
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
-  display: "flex",
+  display: "none",
   gap: "20px",
   alignItems: "center",
+  [theme.breakpoints.up("sm")]: {
+    display: "flex" /*S'affiche si au dessus de sm sinon display : none*/,
+  },
+}));
+
+const UserBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  gap: "10px",
+  alignItems: "center",
+  [theme.breakpoints.up("sm")]: {
+    display: "none" /*S'affiche si en dessous de sm sinon display : none*/,
+  },
 }));
 function Navbar() {
   return (
@@ -65,6 +78,14 @@ function Navbar() {
             src="https://media.licdn.com/dms/image/v2/D4E03AQHyxEVxYejbsw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725607631430?e=2147483647&v=beta&t=z7BJKnTdQmBANNl3lik6dqXQXSg7JHIRfvWe4zSzeR8"
           />
         </Icons>
+        <UserBox>
+          <Avatar
+            sx={{ width: "30px", height: "30px" }}
+            alt="Avatar"
+            src="https://media.licdn.com/dms/image/v2/D4E03AQHyxEVxYejbsw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725607631430?e=2147483647&v=beta&t=z7BJKnTdQmBANNl3lik6dqXQXSg7JHIRfvWe4zSzeR8"
+          />
+          <Typography variant={"span"}>Riyad</Typography>
+        </UserBox>
       </StyledToolbar>
     </AppBar>
   );
