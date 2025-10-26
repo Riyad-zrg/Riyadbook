@@ -14,34 +14,25 @@ import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import React from "react";
+import PropTypes from "prop-types";
 
-function Post() {
+function Post({ person, date, image, description }) {
   return (
     <Card>
       <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-            R
-          </Avatar>
-        }
+        avatar={<Avatar aria-label="userpicture" src={person.avatar} />}
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={person.username}
+        subheader={date}
       />
-      <CardMedia
-        component="img"
-        height="20%"
-        image="src/assets/images/posts/post_image_grand_rex.jpg"
-        alt="Paella dish"
-      />
+      <CardMedia component="img" height="20%" image={image} alt="Paella dish" />
       <CardContent>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          #ConcoursJeFilmeLeMétierQuiMePlait2024 #GrandRex Bravo à nos deux
-          gagnant du Grand Prix Éducation !
+          {description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -58,5 +49,15 @@ function Post() {
     </Card>
   );
 }
+
+Post.propTypes = {
+  person: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+  }),
+  date: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  description: PropTypes.string,
+};
 
 export default Post;
