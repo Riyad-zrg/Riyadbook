@@ -1,5 +1,14 @@
 import React from "react";
-import { Avatar, AvatarGroup, Box, styled, Typography } from "@mui/material";
+import {
+  Avatar,
+  AvatarGroup,
+  Box,
+  ImageList,
+  ImageListItem,
+  ListItem,
+  styled,
+  Typography,
+} from "@mui/material";
 import Badge from "@mui/material/Badge";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -46,6 +55,21 @@ function Rightbar() {
     { alt: "Peter Parker", src: "src/assets/images/Avatar/PeterParker.jpg" },
   ];
 
+  const images = [
+    "src/assets/images/gallery/doge_luxe.jpg",
+    "src/assets/images/gallery/shifu.jpg",
+    "src/assets/images/gallery/spongebob.jpg",
+    "src/assets/images/gallery/cat_meme.jpg",
+    "src/assets/images/gallery/shocked_cat.jpg",
+    "src/assets/images/gallery/stock_dog.jpg",
+    "src/assets/images/gallery/dog_meme.jpg",
+    "src/assets/images/gallery/dog_fire_meme.jpg",
+    "src/assets/images/gallery/thumbs_up_cat.jpg",
+    "src/assets/images/gallery/stand_up_cat.jpg",
+    "src/assets/images/gallery/hamster_phone.jpg",
+    "src/assets/images/gallery/crab_fish.jpg",
+  ];
+
   return (
     <Box
       flex={2}
@@ -54,7 +78,7 @@ function Rightbar() {
         display: { xs: "none", sm: "block" },
       }}
     >
-      <Box position={"fixed"}>
+      <Box position={"fixed"} width={"27%"} marginTop={2} marginBottom={2}>
         <Typography variant={"h6"} fontWeight={200}>
           Amis En Ligne
         </Typography>
@@ -71,6 +95,22 @@ function Rightbar() {
             </StyledBadge>
           ))}
         </AvatarGroup>
+
+        <Typography variant={"h6"} fontWeight={200}>
+          Photos Récentes
+        </Typography>
+        <ImageList cols={3} rowHeight={200} gap={5}>
+          {images.map((image) => (
+            <ImageListItem key={image}>
+              <img
+                srcSet={`${image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                src={`${image}?w=164&h=164&fit=crop&auto=format`}
+                alt="Post Image"
+                loading="lazy"
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
       </Box>
     </Box>
   );
