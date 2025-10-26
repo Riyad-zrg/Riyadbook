@@ -203,7 +203,7 @@ function Rightbar() {
           ))}
         </AvatarGroup>
 
-        <Typography variant={"h6"} fontWeight={200}>
+        <Typography variant={"h6"} fontWeight={200} marginTop={2}>
           Photos Récentes
         </Typography>
         <ImageList cols={3} rowHeight={200} gap={5}>
@@ -220,7 +220,7 @@ function Rightbar() {
           ))}
         </ImageList>
 
-        <Typography variant={"h6"} fontWeight={200}>
+        <Typography variant={"h6"} fontWeight={200} marginTop={2}>
           Conversations Récentes
         </Typography>
 
