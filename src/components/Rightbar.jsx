@@ -107,10 +107,15 @@ function Rightbar() {
                 src={`${image}?w=164&h=164&fit=crop&auto=format`}
                 alt="Post Image"
                 loading="lazy"
+                style={{ objectFit: "cover", width: "100%", height: "100%" }}
               />
             </ImageListItem>
           ))}
         </ImageList>
+
+        <Typography variant={"h6"} fontWeight={200}>
+          Conversations Récentes
+        </Typography>
       </Box>
     </Box>
   );
