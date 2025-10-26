@@ -7,17 +7,18 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
+  Checkbox,
   IconButton,
   Typography,
 } from "@mui/material";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { red } from "@mui/material/colors";
 
 function Feed() {
   return (
-    <Box style={{ backgroundColor: "skyblue" }} flex={4} p={2}>
+    <Box flex={4} p={2}>
       <Card>
         <CardHeader
           avatar={
@@ -35,7 +36,7 @@ function Feed() {
         />
         <CardMedia
           component="img"
-          height="450"
+          height="20%"
           image="src/assets/images/posts/post_image_grand_rex.jpg"
           alt="Paella dish"
         />
@@ -47,7 +48,10 @@ function Feed() {
         </CardContent>
         <CardActions disableSpacing>
           <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
+            <Checkbox
+              icon={<FavoriteBorder />}
+              checkedIcon={<FavoriteIcon sx={{ color: "red" }} />}
+            />
           </IconButton>
           <IconButton aria-label="share">
             <ShareIcon />
