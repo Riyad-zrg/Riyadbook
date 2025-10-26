@@ -135,7 +135,6 @@ function Feed() {
           person={post.person}
           date={post.date}
           image={post.image}
-          imageAlt={post.imageAlt}
           description={post.description}
         />
       ))}
