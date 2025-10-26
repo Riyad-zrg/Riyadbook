@@ -20,81 +20,83 @@ import DarkModeSwitch from "./DarkModeSwitch.jsx";
 function Sidebar() {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-      <List>
-        {/* Accueil */}
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#home">
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Accueil" />
-          </ListItemButton>
-        </ListItem>
+      <Box position={"fixed"}>
+        <List>
+          {/* Accueil */}
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#home">
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Accueil" />
+            </ListItemButton>
+          </ListItem>
 
-        {/* Pages */}
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#pages">
-            <ListItemIcon>
-              <ArticleIcon />
-            </ListItemIcon>
-            <ListItemText primary="Pages" />
-          </ListItemButton>
-        </ListItem>
+          {/* Pages */}
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#pages">
+              <ListItemIcon>
+                <ArticleIcon />
+              </ListItemIcon>
+              <ListItemText primary="Pages" />
+            </ListItemButton>
+          </ListItem>
 
-        {/* Groupes */}
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#groups">
-            <ListItemIcon>
-              <GroupsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Groupes" />
-          </ListItemButton>
-        </ListItem>
+          {/* Groupes */}
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#groups">
+              <ListItemIcon>
+                <GroupsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Groupes" />
+            </ListItemButton>
+          </ListItem>
 
-        {/* Marketplace */}
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#marketplace">
-            <ListItemIcon>
-              <StorefrontIcon />
-            </ListItemIcon>
-            <ListItemText primary="Marketplace" />
-          </ListItemButton>
-        </ListItem>
+          {/* Marketplace */}
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#marketplace">
+              <ListItemIcon>
+                <StorefrontIcon />
+              </ListItemIcon>
+              <ListItemText primary="Marketplace" />
+            </ListItemButton>
+          </ListItem>
 
-        {/* Amis */}
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#friends">
-            <ListItemIcon>
-              <PeopleIcon />
-            </ListItemIcon>
-            <ListItemText primary="Amis" />
-          </ListItemButton>
-        </ListItem>
+          {/* Amis */}
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#friends">
+              <ListItemIcon>
+                <PeopleIcon />
+              </ListItemIcon>
+              <ListItemText primary="Amis" />
+            </ListItemButton>
+          </ListItem>
 
-        {/* Paramètres */}
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#settings">
-            <ListItemIcon>
-              <SettingsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Paramètres" />
-          </ListItemButton>
-        </ListItem>
+          {/* Paramètres */}
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#settings">
+              <ListItemIcon>
+                <SettingsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Paramètres" />
+            </ListItemButton>
+          </ListItem>
 
-        {/* Profil */}
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#profile">
-            <ListItemIcon>
-              <AccountCircleIcon />
-            </ListItemIcon>
-            <ListItemText primary="Profil" />
-          </ListItemButton>
-        </ListItem>
+          {/* Profil */}
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#profile">
+              <ListItemIcon>
+                <AccountCircleIcon />
+              </ListItemIcon>
+              <ListItemText primary="Profil" />
+            </ListItemButton>
+          </ListItem>
 
-        <ListItem disablePadding>
-          <DarkModeSwitch component="div" />
-        </ListItem>
-      </List>
+          <ListItem disablePadding>
+            <DarkModeSwitch component="div" />
+          </ListItem>
+        </List>
+      </Box>
     </Box>
   );
 }
