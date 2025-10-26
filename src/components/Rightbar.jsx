@@ -5,11 +5,12 @@ import {
   Box,
   ImageList,
   ImageListItem,
-  ListItem,
+  List,
   styled,
   Typography,
 } from "@mui/material";
 import Badge from "@mui/material/Badge";
+import Conversation from "./Conversation.jsx";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -70,6 +71,112 @@ function Rightbar() {
     "src/assets/images/gallery/crab_fish.jpg",
   ];
 
+  const conversations = [
+    {
+      person: {
+        username: "Peter Parker",
+        avatar: "src/assets/images/Avatar/PeterParker.jpg",
+      },
+      conversation: {
+        title: "Hey !",
+        lastMessageUser: "Peter Parker: ",
+        lastMessage:
+          "Salut mec, si jamais tu croises une araignée ne la touche pas...",
+      },
+    },
+    {
+      person: {
+        username: "Neo Anderson",
+        avatar: "src/assets/images/Avatar/Neo.jpg",
+      },
+      conversation: {
+        title: "Glitch dans la matrice",
+        lastMessageUser: "Neo Anderson: ",
+        lastMessage:
+          "Salut… tu vois ce message ou c’est juste une simulation ? 🌀",
+      },
+    },
+    {
+      person: {
+        username: "Tony Stark",
+        avatar: "src/assets/images/Avatar/TonyStark.jpg",
+      },
+      conversation: {
+        title: "Génie milliardaire",
+        lastMessageUser: "Tony Stark: ",
+        lastMessage:
+          "N'appuie pas sur l'interrupteur en sortant, je l'ai rélié à un missile.",
+      },
+    },
+    {
+      person: {
+        username: "Homer Simpson",
+        avatar: "src/assets/images/Avatar/HomerSimpson.jpg",
+      },
+      conversation: {
+        title: "Pause donuts",
+        lastMessageUser: "Homer Simpson: ",
+        lastMessage: "Marge...est-ce que tu m'as préparé mon donut ?",
+      },
+    },
+    {
+      person: {
+        username: "Mario",
+        avatar: "src/assets/images/Avatar/Mario.jpg",
+      },
+      conversation: {
+        title: "Aventure perdue",
+        lastMessageUser: "Mario: ",
+        lastMessage: "Tu sais pas où est Peach ? Je l’ai encore perdue…",
+      },
+    },
+    {
+      person: {
+        username: "Dark Vador",
+        avatar: "src/assets/images/Avatar/DarthVader.jpg",
+      },
+      conversation: {
+        title: "Révélation",
+        lastMessageUser: "Dark Vador: ",
+        lastMessage: "Je cherche mon fils...c'est toi ?",
+      },
+    },
+    {
+      person: {
+        username: "Rick Sanchez",
+        avatar: "src/assets/images/Avatar/RickSanchez.jpg",
+      },
+      conversation: {
+        title: "Multivers",
+        lastMessageUser: "Rick Sanchez: ",
+        lastMessage:
+          "Yo, j’ai essayé de t’envoyer ce message depuis un autre univers… ça marche ici aussi 😎",
+      },
+    },
+    {
+      person: {
+        username: "Joey Tribbiani",
+        avatar: "src/assets/images/Avatar/JoeyTribbiani.jpg",
+      },
+      conversation: {
+        title: "Faim urgente",
+        lastMessageUser: "Coincé Dinde ",
+        lastMessage: "J'ai une dinde sur la tête, c'est dur pour écrire",
+      },
+    },
+    {
+      person: {
+        username: "Gandalf The Grey",
+        avatar: "src/assets/images/Avatar/Gandalf.jpg",
+      },
+      conversation: {
+        title: "Comment t'as fait ?",
+        lastMessageUser: "Gandalf The Grey: ",
+        lastMessage: "Comment t'as fais pour passer ?",
+      },
+    },
+  ];
+
   return (
     <Box
       flex={2}
@@ -116,6 +223,18 @@ function Rightbar() {
         <Typography variant={"h6"} fontWeight={200}>
           Conversations Récentes
         </Typography>
+
+        <List
+          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+        >
+          {conversations.map((conversation, index) => (
+            <Conversation
+              key={index}
+              person={conversation.person}
+              conversation={conversation.conversation}
+            />
+          ))}
+        </List>
       </Box>
     </Box>
   );
