@@ -16,9 +16,9 @@ import ShareIcon from "@mui/icons-material/Share";
 import React from "react";
 import PropTypes from "prop-types";
 
-function Post({ person, date, image, description }) {
+function Post({ person, date, image, imageAlt, description }) {
   return (
-    <Card>
+    <Card sx={{ margin: "20px" }}>
       <CardHeader
         avatar={<Avatar aria-label="userpicture" src={person.avatar} />}
         action={
@@ -29,7 +29,7 @@ function Post({ person, date, image, description }) {
         title={person.username}
         subheader={date}
       />
-      <CardMedia component="img" height="20%" image={image} alt="Paella dish" />
+      <CardMedia component="img" height="20%" image={image} alt={imageAlt} />
       <CardContent>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
           {description}
