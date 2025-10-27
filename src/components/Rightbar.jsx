@@ -59,11 +59,8 @@ function Rightbar() {
   const images = [
     "src/assets/images/gallery/doge_luxe.jpg",
     "src/assets/images/gallery/shifu.jpg",
-    "src/assets/images/gallery/spongebob.jpg",
     "src/assets/images/gallery/cat_meme.jpg",
     "src/assets/images/gallery/shocked_cat.jpg",
-    "src/assets/images/gallery/stock_dog.jpg",
-    "src/assets/images/gallery/dog_meme.jpg",
     "src/assets/images/gallery/dog_fire_meme.jpg",
     "src/assets/images/gallery/thumbs_up_cat.jpg",
     "src/assets/images/gallery/stand_up_cat.jpg",
