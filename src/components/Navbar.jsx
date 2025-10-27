@@ -66,7 +66,7 @@ function Navbar() {
         </Stack>
         <SearchBar>
           <SearchIcon color="primary" />
-          <InputBase placeholder="Recherche..." />
+          <InputBase placeholder="Recherche..." sx={{ color: "gray" }} />
         </SearchBar>
         <Icons>
           <Badge badgeContent={4} color="error">
