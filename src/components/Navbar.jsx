@@ -59,7 +59,7 @@ function Navbar() {
           <EmojiEmotionsIcon sx={{ paddingTop: "3.5px" }} />
           <Typography
             variant={"h6"}
-            sx={{ display: { xs: "none", sm: "block" } }}
+            sx={{ display: { mobile: "none", desktop: "block" } }}
           >
             RiyadBook
           </Typography>

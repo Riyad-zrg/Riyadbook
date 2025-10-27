@@ -12,6 +12,12 @@ function App() {
     palette: {
       mode: mode,
     },
+    breakpoints: {
+      values: {
+        mobile: 0,
+        desktop: 940,
+      },
+    },
   });
   return (
     <ThemeProvider theme={theme}>

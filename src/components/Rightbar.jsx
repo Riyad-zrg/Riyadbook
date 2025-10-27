@@ -179,7 +179,7 @@ function Rightbar({ theme }) {
       flex={2}
       p={2}
       sx={{
-        display: { xs: "none", sm: "block" },
+        display: { mobile: "none", desktop: "block" },
       }}
     >
       <Box
@@ -212,7 +212,10 @@ function Rightbar({ theme }) {
           Amis En Ligne
         </Typography>
 
-        <AvatarGroup max={7}>
+        <AvatarGroup
+          max={7}
+          sx={{ justifyContent: "left", paddingLeft: "10px" }}
+        >
           {avatars.map((avatar, index) => (
             <StyledBadge
               key={index}

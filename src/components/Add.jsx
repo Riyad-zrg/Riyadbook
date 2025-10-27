@@ -44,7 +44,7 @@ function Add() {
         sx={{
           position: "fixed",
           bottom: "20px",
-          left: { xs: "calc(50% - 25px)", md: "30px" },
+          left: { mobile: "calc(50% - 25px)", desktop: "30px" },
         }}
         onClick={handleOpen}
       >

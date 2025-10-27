@@ -19,7 +19,7 @@ import DarkModeSwitch from "./DarkModeSwitch.jsx";
 
 function Sidebar({ setMode, mode }) {
   return (
-    <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+    <Box flex={1} p={2} sx={{ display: { mobile: "none", desktop: "block" } }}>
       <Box position={"fixed"}>
         <List>
           {/* Accueil */}
