@@ -1,8 +1,11 @@
 import {
   Avatar,
   Box,
+  Button,
+  ButtonGroup,
   Fab,
   Modal,
+  Stack,
   styled,
   TextField,
   Tooltip,
@@ -10,6 +13,11 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import React from "react";
+import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
+import ImageIcon from "@mui/icons-material/Image";
+import VideoCameraBackIcon from "@mui/icons-material/VideoCameraBack";
+import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
+import DateRangeIcon from "@mui/icons-material/DateRange";
 
 const StyledModal = styled(Modal)({
   display: "flex",
@@ -51,8 +59,8 @@ function Add() {
         aria-describedby="modal-modal-description"
       >
         <Box
-          width={800}
-          height={520}
+          width={650}
+          height={400}
           backgroundColor="white"
           padding={3}
           borderRadius={5}
@@ -62,7 +70,7 @@ function Add() {
           </Typography>
           <UserBox>
             <Avatar
-              sx={{ width: "30px", height: "30px" }}
+              sx={{ width: "40px", height: "40px" }}
               alt="Avatar"
               src="https://media.licdn.com/dms/image/v2/D4E03AQHyxEVxYejbsw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725607631430?e=2147483647&v=beta&t=z7BJKnTdQmBANNl3lik6dqXQXSg7JHIRfvWe4zSzeR8"
             />
@@ -74,10 +82,26 @@ function Add() {
             sx={{ width: "100%" }}
             id="standard-multiline-static"
             multiline
-            rows={4}
+            rows={8}
             placeholder="Quoi de neuf, Riyad ?"
             variant="standard"
           />
+          <Stack direction={"row"} gap={1} marginBottom={2} marginTop={2}>
+            <EmojiEmotionsIcon fontSize="large" color={"primary"} />
+            <ImageIcon fontSize="large" color={"primary"} />
+            <VideoCameraBackIcon fontSize="large" color={"primary"} />
+            <PersonAddAlt1Icon fontSize="large" color={"success"} />
+          </Stack>
+          <ButtonGroup
+            fullWidth={true}
+            variant="contained"
+            aria-label="Basic button group"
+          >
+            <Button>Post</Button>
+            <Button sx={{ width: "100px" }}>
+              <DateRangeIcon />
+            </Button>
+          </ButtonGroup>
         </Box>
       </StyledModal>
     </>
