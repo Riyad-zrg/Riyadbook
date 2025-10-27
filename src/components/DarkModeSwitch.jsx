@@ -64,6 +64,7 @@ function DarkModeSwitch({ setMode, mode }) {
         onChange={() => {
           setMode(mode === "light" ? "dark" : "light");
         }}
+        checked={mode === "dark"}
       />
     </FormGroup>
   );
