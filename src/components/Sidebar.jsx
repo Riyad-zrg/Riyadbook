@@ -17,7 +17,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import DarkModeSwitch from "./DarkModeSwitch.jsx";
 
-function Sidebar() {
+function Sidebar({ setMode, mode }) {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position={"fixed"}>
@@ -93,7 +93,7 @@ function Sidebar() {
           </ListItem>
 
           <ListItem disablePadding>
-            <DarkModeSwitch component="div" />
+            <DarkModeSwitch component="div" mode={mode} setMode={setMode} />
           </ListItem>
         </List>
       </Box>

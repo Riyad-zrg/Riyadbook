@@ -7,20 +7,21 @@ import Add from "./components/Add.jsx";
 import { useState } from "react";
 
 function App() {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
   const theme = createTheme({
     palette: {
       mode: mode,
     },
   });
+  const [theme, setTheme] = useState(theme);
   return (
     <ThemeProvider theme={theme}>
       <Box backgroundColor={"background.default"} color={"text.primary"}>
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
-          <Sidebar />
+          <Sidebar setMode={setMode} mode={mode} />
           <Feed />
-          <Rightbar />
+          <Rightbar theme={theme} />
         </Stack>
         <Add />
       </Box>

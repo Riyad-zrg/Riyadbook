@@ -56,12 +56,14 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-function DarkModeSwitch() {
+function DarkModeSwitch({ setMode, mode }) {
   return (
     <FormGroup>
       <FormControlLabel
         control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-        label="MUI switch"
+        onChange={() => {
+          setMode(mode === "light" ? "dark" : "light");
+        }}
       />
     </FormGroup>
   );

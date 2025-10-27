@@ -39,7 +39,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-function Rightbar() {
+function Rightbar({ theme }) {
   const avatars = [
     { alt: "Dark Vador", src: "src/assets/images/Avatar/DarthVader.jpg" },
     {
@@ -156,8 +156,8 @@ function Rightbar() {
         avatar: "src/assets/images/Avatar/JoeyTribbiani.jpg",
       },
       conversation: {
-        title: "Faim urgente",
-        lastMessageUser: "Coincé Dinde ",
+        title: "Coincé Dinde",
+        lastMessageUser: "Joey Tribbiani: ",
         lastMessage: "J'ai une dinde sur la tête, c'est dur pour écrire",
       },
     },
@@ -182,7 +182,32 @@ function Rightbar() {
         display: { xs: "none", sm: "block" },
       }}
     >
-      <Box position={"fixed"} width={"27%"} marginTop={2} marginBottom={2}>
+      <Box
+        sx={(theme) => ({
+          position: "sticky",
+          top: 64,
+          height: "calc(100vh - 64px)",
+          overflowY: "auto",
+          pr: 1,
+
+          scrollbarWidth: "thin",
+          scrollbarColor: `${theme.palette.text.primary} transparent`,
+
+          "&::-webkit-scrollbar": {
+            width: "8px",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: theme.palette.text.primary,
+            borderRadius: "8px",
+          },
+          "&::-webkit-scrollbar-track": {
+            backgroundColor: theme.palette.background.default,
+          },
+        })}
+        width={"100%"}
+        marginTop={2}
+        marginBottom={2}
+      >
         <Typography variant={"h6"} fontWeight={200}>
           Amis En Ligne
         </Typography>
