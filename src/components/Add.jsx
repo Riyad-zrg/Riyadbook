@@ -61,9 +61,10 @@ function Add() {
         <Box
           width={650}
           height={400}
-          backgroundColor="white"
           padding={3}
           borderRadius={5}
+          backgroundColor={"background.default"}
+          color={"text.primary"}
         >
           <Typography variant={"h5"} color={"gray"} textAlign={"center"}>
             Créer un nouveau post

@@ -15,7 +15,7 @@ function App() {
   });
   return (
     <ThemeProvider theme={theme}>
-      <Box backgroundColor={"background.default"}>
+      <Box backgroundColor={"background.default"} color={"text.primary"}>
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
           <Sidebar />
