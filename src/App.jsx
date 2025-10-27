@@ -13,7 +13,6 @@ function App() {
       mode: mode,
     },
   });
-  const [theme, setTheme] = useState(theme);
   return (
     <ThemeProvider theme={theme}>
       <Box backgroundColor={"background.default"} color={"text.primary"}>
