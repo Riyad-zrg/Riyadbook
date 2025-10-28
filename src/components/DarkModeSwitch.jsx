@@ -60,7 +60,7 @@ function DarkModeSwitch({ setMode, mode }) {
   return (
     <FormGroup>
       <FormControlLabel
-        control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+        control={<MaterialUISwitch sx={{ m: 1 }}/>}
         onChange={() => {
           setMode(mode === "light" ? "dark" : "light");
         }}
