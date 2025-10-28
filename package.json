@@ -2,11 +2,11 @@
   "name": "fakebook-mui-learning",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/Riyad-zrg/Riyadbook",
+  "homepage": "https://Riyad-zrg.github.io/Riyadbook",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
