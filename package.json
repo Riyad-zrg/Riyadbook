@@ -2,7 +2,7 @@
   "name": "fakebook-mui-learning",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://riyad-zrg.github.io/riyadbook",
+  "homepage": "https://riyad-zrg.github.io/Riyadbook",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
